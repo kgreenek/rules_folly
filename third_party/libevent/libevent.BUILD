@@ -9,7 +9,6 @@ filegroup(
 
 cmake(
     name = "libevent",
-    visibility = ["//visibility:public"],
     cache_entries = {
         "EVENT__DISABLE_OPENSSL": "on",
         "EVENT__DISABLE_MBEDTLS": "on",
@@ -18,6 +17,7 @@ cmake(
         "EVENT__LIBRARY_TYPE": "SHARED",
         "_GNU_SOURCE": "on",
     },
-    out_shared_libs	= ["libevent.so"],
     lib_source = ":all",
+    out_shared_libs = ["libevent-2.1.so.7"],
+    visibility = ["//visibility:public"],
 )
