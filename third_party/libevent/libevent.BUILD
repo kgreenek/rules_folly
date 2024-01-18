@@ -18,6 +18,9 @@ cmake(
         "_GNU_SOURCE": "on",
     },
     lib_source = ":all",
-    out_shared_libs = ["libevent-2.1.so.7"],
+    out_shared_libs = [
+        "libevent-2.1.so.7",
+        "libevent_core-2.1.so.7",
+    ],
     visibility = ["//visibility:public"],
 )
